@@ -74,9 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })
 
-// 프로젝트 모달(팝업) 기능
+// 프로젝트 모달(팝업) 기능 (team.html에서도 동작하도록)
 function setupProjectModal() {
-  // 여러 프로젝트 카드/모달 지원
   document.querySelectorAll('.project-detail-btn').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       e.stopPropagation()
@@ -89,12 +88,13 @@ function setupProjectModal() {
     })
   })
   document.querySelectorAll('.project-modal').forEach(function (modal) {
-    // X 버튼
-    modal.querySelector('.modal-close').addEventListener('click', function () {
-      modal.classList.remove('active')
-      document.body.style.overflow = ''
-    })
-    // 모달 바깥 클릭 시 닫기
+    const closeBtn = modal.querySelector('.modal-close')
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        modal.classList.remove('active')
+        document.body.style.overflow = ''
+      })
+    }
     modal.addEventListener('mousedown', function (e) {
       if (e.target === modal) {
         modal.classList.remove('active')
@@ -103,7 +103,11 @@ function setupProjectModal() {
     })
   })
 }
-// 프로젝트 페이지에서만 실행
-if (document.querySelector('.project-list')) {
+
+// project-list 또는 .project-modal이 있으면 실행 (team.html 지원)
+if (
+  document.querySelector('.project-list') ||
+  document.querySelector('.project-modal')
+) {
   setupProjectModal()
 }

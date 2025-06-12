@@ -1,0 +1,169 @@
+/* =========================
+   about.html 전용 스타일
+   ========================= */
+.about-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px 80px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.about-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 28px 24px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.info-box ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 1.08rem;
+  color: #222;
+}
+
+.intro-toggle {
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #0d0436;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.intro-toggle .arrow {
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+.intro-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 1.8, 0.6, 1), padding 0.2s;
+  padding: 0 2px;
+}
+.intro-content.open {
+  max-height: 300px;
+  padding: 12px 2px 8px 2px;
+}
+
+.photo-box {
+  align-items: center;
+  text-align: center;
+}
+.about-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.about-pro {
+  width: 300px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.about-photo.small {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+}
+.photo-desc {
+  font-size: 1.02rem;
+  color: #333;
+  opacity: 0.92;
+}
+
+.about-skill-tool-row {
+  display: flex;
+  gap: 18px;
+  width: 100%;
+  justify-content: space-between;
+}
+.skill-box,
+.tool-box {
+  flex: 1 1 0;
+  align-items: center;
+  text-align: center;
+}
+.skill-box .icon-row,
+.tool-box .icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.skill-box .about-photo.small,
+.tool-box .about-photo.small {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  margin-bottom: 0;
+}
+.skill-box .about-photo.small:last-of-type,
+.tool-box .about-photo.small:last-of-type {
+  margin-right: 0;
+}
+
+/* 반응형 (갤럭시 S20 울트라 기준 412px) */
+@media (max-width: 900px) {
+  .about-main {
+    padding: 18px 2vw 40px 2vw;
+    gap: 18px;
+  }
+  .about-box {
+    padding: 18px 10px;
+  }
+  .about-photo {
+    width: 110px;
+    height: 110px;
+  }
+  .about-photo.small {
+    width: 54px;
+    height: 54px;
+  }
+  .about-skill-tool-row {
+    gap: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .about-main {
+    padding: 8px 2vw 24px 2vw;
+    gap: 10px;
+  }
+  .about-box {
+    padding: 10px 4px;
+    border-radius: 12px;
+  }
+  .about-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+  }
+  .about-photo.small {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+  }
+  .about-skill-tool-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .skill-box,
+  .tool-box {
+    width: 100%;
+  }
+}

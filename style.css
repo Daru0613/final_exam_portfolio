@@ -12,6 +12,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* 네브바 개선 (가운데 정렬, gap, 반응형) */
 .navbar {
   display: flex;
   justify-content: center;
@@ -20,17 +21,19 @@ body {
   padding: 16px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 .nav-item {
-  color: #fff;
+  color: #222;
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
   transition: color 0.2s;
+  padding: 4px 12px;
+  border-radius: 8px;
 }
-
-.nav-item:hover {
+.nav-item:hover,
+.nav-item.active {
   color: #ffd700;
+  background: #2221;
 }
 
 footer.footer {
@@ -66,5 +69,14 @@ footer.footer {
   }
   body {
     background-position: top;
+  }
+  .navbar {
+    gap: 10px;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .nav-item {
+    font-size: 15px;
+    padding: 2px 6px;
   }
 }

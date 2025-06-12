@@ -6,16 +6,211 @@
     <title>Team</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="/CSS/team.css" />
+    <link rel="stylesheet" href="/CSS/project.css" />
   </head>
   <body>
     <nav class="navbar">
       <a href="index.html" class="nav-item">Home</a>
       <a href="about.html" class="nav-item">About</a>
       <a href="project.html" class="nav-item">Project</a>
-      <a href="secon.html" class="nav-item">Secon</a>
       <a href="team.html" class="nav-item">Team</a>
       <a href="guestbook.html" class="nav-item">Guestbook</a>
     </nav>
-    <script src="main.js"></script>
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <section>
+        <!-- 소개 카드: 그리드 바깥에 위치 -->
+        <div class="wide-card">
+          <div style="display: flex; align-items: center; gap: 24px">
+            <img
+              src="img/icons/teamlogo.png"
+              alt="CMD 로고"
+              style="
+                width: 64px;
+                height: 64px;
+                border-radius: 12px;
+                background: #fff;
+              "
+            />
+            <div>
+              <h2 style="margin-bottom: 8px">우리 팀 CMD를 소개합니다!</h2>
+              <p style="opacity: 0.85">
+                팀명의 뜻은 <b>Coding master dayo</b> 입니다.<br />
+                이렇게 지은 이유는 CMD(명령프롬프트)에서 영감을 받아 임팩트 있게
+                3행시 느낌으로 지었으며, <br />코딩 마스터를 하겠다는 뜻을
+                담았습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 팀원 카드만 그리드로 묶기 -->
+        <div class="team-section">
+          <div class="team-card">
+            <img src="img/kimseojin.jpg" class="team-photo" />
+            <h2>김서진</h2>
+            <p>92212764</p>
+            <h4>📱 010-7124-6930</h4>
+            <h4>📧 nafi6@naver.com</h4>
+            <!-- 기존 github/web flip-card 버튼 삭제, 아래 team-links만 남김 -->
+            <div class="team-links">
+              <a
+                href="https://github.com/Daru0613"
+                target="_blank"
+                class="team-link-btn"
+              >
+                <img src="img/icons/whitegit.png" alt="GitHub" />GitHub
+              </a>
+              <a href="#" target="_blank" class="team-link-btn">
+                <img src="img/icons/whiteweb.png" alt="개인페이지" />개인페이지
+              </a>
+            </div>
+          </div>
+          <div class="team-card">
+            <img src="img/phb2.webp" class="team-photo" />
+            <h2>박한빈</h2>
+            <p>92212867</p>
+            <h4>📱 010-9737-1732</h4>
+            <h4>📧 vinny122400@gmail.com</h4>
+            <div class="team-links">
+              <a
+                href="https://github.com/han122400"
+                target="_blank"
+                class="team-link-btn"
+              >
+                <img src="img/icons/whitegit.png" alt="GitHub" />GitHub
+              </a>
+              <a href="#" target="_blank" class="team-link-btn">
+                <img src="img/icons/whiteweb.png" alt="개인페이지" />개인페이지
+              </a>
+            </div>
+          </div>
+          <div class="team-card">
+            <img src="img/ijh.png" class="team-photo" />
+            <h2>이제혁</h2>
+            <p>92212996</p>
+            <h4>📱 010-8981-2027</h4>
+            <h4>📧 jehyuk1001@gmail.com</h4>
+            <div class="team-links">
+              <a
+                href="https://github.com/dlwpgur03"
+                target="_blank"
+                class="team-link-btn"
+              >
+                <img src="img/icons/whitegit.png" alt="GitHub" />GitHub
+              </a>
+              <a href="#" target="_blank" class="team-link-btn">
+                <img src="img/icons/whiteweb.png" alt="개인페이지" />개인페이지
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- 팀플 프로젝트 카드 2개 -->
+        <div class="project-list" style="margin-top: 36px">
+          <div class="project-card" data-modal="modal-1">
+            <div class="project-img-wrap">
+              <img src="img/teamproject.png" alt="팀플1" class="project-img" />
+            </div>
+            <div class="project-info">
+              <h2 class="project-name">팀플 프로젝트 1</h2>
+              <p class="project-desc">
+                HTML, CSS 기반의 협업 프로젝트로, <br />팀에 대한 소개와
+                <br />AI에 대한 내용이 담겨 있습니다.
+              </p>
+            </div>
+            <div class="project-hover">
+              <a
+                href="https://cm-dproject.vercel.app/index.html"
+                target="_blank"
+                class="project-link-btn"
+                >페이지 이동</a
+              >
+              <button class="project-detail-btn" data-modal="modal-1">
+                자세히 보기
+              </button>
+            </div>
+          </div>
+          <div class="project-card" data-modal="modal-2">
+            <div class="project-img-wrap">
+              <img src="img/teamproject2.png" alt="팀플2" class="project-img" />
+            </div>
+            <div class="project-info">
+              <h2 class="project-name">팀플 프로젝트 2</h2>
+              <p class="project-desc">
+                HTLM, CSS, JavaScript 기반의 협업 프로젝트로, <br />
+                전과 달리 JavaScript 기능을 더욱 많이 사용하여 <br />
+                로그인 기능, Todo 리스트 기능 등이 있습니다.
+              </p>
+            </div>
+            <div class="project-hover">
+              <a href="#" target="_blank" class="project-link-btn"
+                >페이지 이동</a
+              >
+              <button class="project-detail-btn" data-modal="modal-2">
+                자세히 보기
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 팀플 프로젝트 모달 2개 -->
+        <div class="project-modal" id="modal-1">
+          <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>팀플 프로젝트 1 상세</h2>
+            <p>
+              <li>
+                HTML, CSS 기반의 협업 프로젝트로, 팀에 대한 소개와 AI에 대한
+                내용이 담겨 있습니다.
+              </li>
+              <li>
+                JavaScript를 소량 사용하여 다크모드, 라이트모드를
+                구현하였습니다.
+              </li>
+              <li>
+                팀 및 주제 소개 페이지에서 팀명과 팀원들에 대해 소개하고 주제를
+                소개합니다.
+              </li>
+              <li>
+                디자인이 일관적이며 첫 페이지 부분에서 소량의 글로 최대의 정보를
+                담기 위한 디자인이 의도 되었습니다.
+              </li>
+              <li>프로젝트의 주제인 AI에 대한 내용이 소개되어있습니다.</li>
+              <li>
+                프로젝트를 제작하면서 사용한 스킬과 툴이 소개되어있습니다.
+              </li>
+            </p>
+          </div>
+        </div>
+        <div class="project-modal" id="modal-2">
+          <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>팀플 프로젝트 2 상세</h2>
+            <p>
+              <li>
+                HTML, CSS 기반의 협업 프로젝트로, 팀에 대한 소개와 AI에 대한
+                내용이 담겨 있습니다.
+              </li>
+              <li>JavaScript를 사용하여 동적인 요소를 추가했습니다.</li>
+              <li>
+                주로 로그인, 회원가입 기능, ToDo 리스트 기능, 팝업창 기능 등이
+                구현되어 있습니다.
+              </li>
+              <li>
+                만약 로그인을 하지않은 상태라면 ToDO 리스트에 접근이 불가하도록
+                되어 있습니다.
+              </li>
+              <li>
+                로그인시 사용자의 아이디를 홈 화면에 띄워주며 로그인이 된
+                상태임을 나타내도록 되어있습니다.
+              </li>
+              <li>
+                첫 페이지에서 사용자가 많은 정보를 받을 수 있도록 상세하게
+                디자인이 되어있습니다.
+              </li>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="main.js" defer></script>
   </body>
 </html>

@@ -12,10 +12,123 @@
       <a href="index.html" class="nav-item">Home</a>
       <a href="about.html" class="nav-item">About</a>
       <a href="project.html" class="nav-item">Project</a>
-      <a href="secon.html" class="nav-item">Secon</a>
       <a href="team.html" class="nav-item">Team</a>
       <a href="guestbook.html" class="nav-item">Guestbook</a>
     </nav>
+    <main class="about-main">
+      <!-- 내 정보 박스 -->
+      <section class="about-box info-box">
+        <h2>About</h2>
+        <ul>
+          <li>이름: 김서진</li>
+          <br />
+          <li>생년월일: 03.06.13</li>
+          <br />
+          <li>MBTI: ENTJ</li>
+          <br />
+          <li>학번: 92212764</li>
+          <br />
+          <li>이메일: nafi6@naver.com</li>
+          <br />
+          <li>전화번호: 010-7124-6930</li>
+        </ul>
+      </section>
+      <!-- 자기소개 접기/펼치기 -->
+      <section class="about-box intro-box">
+        <button class="intro-toggle" id="intro-toggle">
+          자기소개 <span class="arrow">▼</span>
+        </button>
+        <div class="intro-content" id="intro-content">
+          <p>
+            안녕하세요! 정보보호학과 2학년 재학중인 김서진이라고 합니다.
+            <br />간단하게 제 소개를 하자면 일단 저의 개발 가치관은 "사용자의
+            편의" 입니다. <br />
+            제가 사용자의 편의를 제 개발 가치관으로 삼은 이유는 디스코드나 토스
+            같이 사용자의 편의를 우선시한 개발을 보고, <br />실제로 사용하면서
+            느꼈던게 저에게 매우 인상깊다고 생각했기 때문에 이 점이 제 개발
+            가치관이 되었습니다. <br />저는 이 가치관을 이루기 위해 현재 풀스택
+            개발자를 목표로 하고 있고, <br />
+            목표를 이루기 위해 멋쟁이 사자 13기 부원으로 활동하거나 온라인강의,
+            스터디를 하는 등 다양한 노력을 하고 있습니다.
+          </p>
+        </div>
+      </section>
+      <!-- 사진+글 박스 -->
+      <section class="about-box photo-box">
+        <div class="photo-desc">프로그래머스 문제 풀이</div>
+        <img src="img/programmers.png" alt="프로필 사진" class="about-pro" />
+        <div class="photo-desc">
+          위 사진은 프로그래머스에서 [핸드폰 번호 가리기], [짝수와 홀수],<br />
+          [X만큼 간격이 있는 n개의 숫자] 문제 등을 풀고 난 뒤의 기록 입니다.
+        </div>
+      </section>
+      <!-- skill, tool 박스 -->
+      <div class="about-skill-tool-row">
+        <section class="about-box skill-box">
+          <div class="photo-desc">
+            <h1><b>Skill</b></h1>
+          </div>
+          <br />
+          <div class="icon-row">
+            <img src="img/icons/js.png" alt="Skill" class="about-photo small" />
+            <img
+              src="img/icons/html.png"
+              alt="Skill"
+              class="about-photo small"
+            />
+            <img
+              src="img/icons/css.png"
+              alt="Skill"
+              class="about-photo small"
+            />
+            <img
+              src="img/icons/java.png"
+              alt="Skill"
+              class="about-photo small"
+            />
+          </div>
+          <div class="photo-desc">
+            JavaScript, HTML, CSS, Java 등 다양한 웹 기술을 다룰 수 있습니다.
+          </div>
+        </section>
+        <section class="about-box tool-box">
+          <div class="photo-desc">
+            <h1><b>Tool</b></h1>
+          </div>
+          <br />
+          <div class="icon-row">
+            <img
+              src="img/icons/github.png"
+              alt="Tool"
+              class="about-photo small"
+            />
+            <img
+              src="img/icons/discord.png"
+              alt="Tool"
+              class="about-photo small"
+            />
+            <img
+              src="img/icons/Notion-logo.svg.png"
+              alt="Tool"
+              class="about-photo small"
+            />
+          </div>
+          <div class="photo-desc">
+            JavaScript, HTML, CSS, Java 등 다양한 웹 기술을 다룰 수 있습니다.
+          </div>
+        </section>
+      </div>
+    </main>
     <script src="main.js"></script>
+    <script>
+      // 자기소개 접기/펼치기
+      const introToggle = document.getElementById('intro-toggle')
+      const introContent = document.getElementById('intro-content')
+      const arrow = introToggle.querySelector('.arrow')
+      introToggle.addEventListener('click', function () {
+        introContent.classList.toggle('open')
+        arrow.textContent = introContent.classList.contains('open') ? '▲' : '▼'
+      })
+    </script>
   </body>
 </html>
