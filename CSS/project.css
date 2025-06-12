@@ -1,0 +1,179 @@
+/* ========================= */
+/* project.html 전용 스타일 */
+/* ========================= */
+.project-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+}
+.project-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.project-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 340px;
+  min-width: 260px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+}
+.project-img-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s;
+}
+.project-card:hover .project-img,
+.project-card:hover .project-info {
+  filter: blur(2.5px) brightness(0.7);
+}
+.project-info {
+  padding: 24px 20px 32px 20px;
+  flex: 1;
+}
+.project-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+.project-desc {
+  font-size: 15px;
+  color: #444;
+  margin: 0;
+}
+.project-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+.project-card:hover .project-hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+.project-link-btn,
+.project-detail-btn {
+  background: #0d0436;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 28px;
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+}
+.project-link-btn:hover,
+.project-detail-btn:hover {
+  background: #ffd700;
+  color: #0d0436;
+}
+
+/* 모달 */
+.project-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  align-items: center;
+  justify-content: center;
+}
+.project-modal.active {
+  display: flex;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px 32px 32px 32px;
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+}
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #222;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* 반응형 (태블릿 이하) */
+@media (max-width: 900px) {
+  .project-list {
+    gap: 20px;
+  }
+  .project-card {
+    width: 90vw;
+    min-width: 0;
+  }
+  .modal-content {
+    min-width: 0;
+    padding: 24px 8vw 24px 8vw;
+  }
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 600px) {
+  .project-title {
+    font-size: 26px;
+  }
+  .project-card {
+    width: 98vw;
+    min-width: 0;
+  }
+  .project-img-wrap {
+    height: 140px;
+  }
+  .project-info {
+    padding: 14px 8px 18px 8px;
+  }
+  .modal-content {
+    padding: 16px 2vw 16px 2vw;
+  }
+}
