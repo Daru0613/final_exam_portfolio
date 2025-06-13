@@ -1,6 +1,3 @@
-/* =========================
-   about.html 전용 스타일
-   ========================= */
 .about-main {
   max-width: 900px;
   margin: 0 auto;
@@ -118,7 +115,7 @@
   margin-right: 0;
 }
 
-/* 반응형 (갤럭시 S20 울트라 기준 412px) */
+/* 반응형 구현 */
 @media (max-width: 900px) {
   .about-main {
     padding: 18px 2vw 40px 2vw;

@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })
 
-// 프로젝트 모달(팝업) 기능 (team.html에서도 동작하도록)
+// 프로젝트 모달(팝업) 기능
 function setupProjectModal() {
   document.querySelectorAll('.project-detail-btn').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
@@ -104,7 +104,7 @@ function setupProjectModal() {
   })
 }
 
-// project-list 또는 .project-modal이 있으면 실행 (team.html 지원)
+// project-list 또는 .project-modal이 있으면 실행
 if (
   document.querySelector('.project-list') ||
   document.querySelector('.project-modal')
