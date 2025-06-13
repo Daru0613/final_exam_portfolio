@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
     renderGuestbook()
 
     btn.addEventListener('click', function () {
-      if (confirm('글을 남기시겠습니까?')) {
-        const name = prompt('이름을 입력하세요')
+      if (confirm('메모를 남기시겠습니까?')) {
+        const name = prompt('제목을 입력하세요')
         if (!name) return
         const content = prompt('내용을 입력하세요')
         if (!content) return
